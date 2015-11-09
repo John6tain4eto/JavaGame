@@ -96,13 +96,13 @@ public class Luncher extends Application
 
                 smurf.setVelocity(0,0);
                 if (input.contains("LEFT"))
-                    smurf.addVelocity(-50,0);
+                    smurf.addVelocity(-90,0);
                 if (input.contains("RIGHT"))
-                    smurf.addVelocity(50,0);
+                    smurf.addVelocity(90,0);
                 if (input.contains("UP"))
-                    smurf.addVelocity(0,-50);
+                    smurf.addVelocity(0,-90);
                 if (input.contains("DOWN"))
-                    smurf.addVelocity(0,50);
+                    smurf.addVelocity(0,90);
 
                 smurf.update(elapsedTime);
 
