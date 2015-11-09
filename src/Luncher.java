@@ -14,8 +14,7 @@ import javafx.scene.input.KeyEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-// Collect the Money Bags!
-public class Example5 extends Application
+public class Luncher extends Application
 {
     public static void main(String[] args)
     {
@@ -25,7 +24,7 @@ public class Example5 extends Application
     @Override
     public void start(Stage theStage)
     {
-        theStage.setTitle( "Collect the Money Bags!" );
+        theStage.setTitle( "What Really smur" );
 
         Group root = new Group();
         Scene theScene = new Scene( root );
@@ -34,7 +33,7 @@ public class Example5 extends Application
         Canvas canvas = new Canvas( 512, 512 );
         root.getChildren().add( canvas );
 
-        ArrayList<String> input = new ArrayList<String>();
+        final ArrayList<String> input = new ArrayList<String>();
 
         theScene.setOnKeyPressed(
                 new EventHandler<KeyEvent>()
@@ -57,7 +56,7 @@ public class Example5 extends Application
                     }
                 });
 
-        GraphicsContext gc = canvas.getGraphicsContext2D();
+        final GraphicsContext gc = canvas.getGraphicsContext2D();
 
         Font theFont = Font.font( "Helvetica", FontWeight.BOLD, 24 );
         gc.setFont( theFont );
@@ -65,11 +64,11 @@ public class Example5 extends Application
         gc.setStroke( Color.BLACK );
         gc.setLineWidth(1);
 
-        Sprite briefcase = new Sprite();
-        briefcase.setImage("briefcase.png");
+        final Sprite briefcase = new Sprite();
+        briefcase.setImage("1.png");
         briefcase.setPosition(200, 0);
 
-        ArrayList<Sprite> moneybagList = new ArrayList<Sprite>();
+        final ArrayList<Sprite> moneybagList = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
         {
@@ -81,9 +80,9 @@ public class Example5 extends Application
             moneybagList.add( moneybag );
         }
 
-        LongValue lastNanoTime = new LongValue( System.nanoTime() );
+        final LongValue lastNanoTime = new LongValue( System.nanoTime() );
 
-        IntValue score = new IntValue(0);
+        final IntValue score = new IntValue(0);
 
         new AnimationTimer()
         {
