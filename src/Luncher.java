@@ -78,15 +78,15 @@ public class Luncher extends Application
         gc.setLineWidth(1);
 
         final Sprite smurf = new Sprite();
-        smurf.setImage("1.png");
-        smurf.setPosition(200, 0);
+        smurf.setImage("2.png");
+        smurf.setPosition(0,  primaryScreenBounds.getHeight());
 
         final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
         {
             Sprite moneybag = new Sprite();
-            moneybag.setImage("mushroom.png");
+            moneybag.setImage("2m.png");
             double px = primaryScreenBounds.getMaxX() * Math.random() + 50;
             double py = primaryScreenBounds.getMaxY() * Math.random() + 50;
             moneybag.setPosition(px,py);
@@ -114,6 +114,9 @@ public class Luncher extends Application
                     smurf.addVelocity(-90,0);
                 if (input.contains("RIGHT"))
                     smurf.addVelocity(90,0);
+                smurf.setImage("3.png");
+                smurf.setImage("2.png");
+                System.out.println( );
                 if (input.contains("UP"))
                     smurf.addVelocity(0,-90);
                 if (input.contains("DOWN"))
