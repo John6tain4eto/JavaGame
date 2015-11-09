@@ -64,9 +64,9 @@ public class Luncher extends Application
         gc.setStroke( Color.BLACK );
         gc.setLineWidth(1);
 
-        final Sprite briefcase = new Sprite();
-        briefcase.setImage("1.png");
-        briefcase.setPosition(200, 0);
+        final Sprite smurf = new Sprite();
+        smurf.setImage("1.png");
+        smurf.setPosition(200, 0);
 
         final ArrayList<Sprite> moneybagList = new ArrayList<Sprite>();
 
@@ -94,17 +94,17 @@ public class Luncher extends Application
 
                 // game logic
 
-                briefcase.setVelocity(0,0);
+                smurf.setVelocity(0,0);
                 if (input.contains("LEFT"))
-                    briefcase.addVelocity(-50,0);
+                    smurf.addVelocity(-50,0);
                 if (input.contains("RIGHT"))
-                    briefcase.addVelocity(50,0);
+                    smurf.addVelocity(50,0);
                 if (input.contains("UP"))
-                    briefcase.addVelocity(0,-50);
+                    smurf.addVelocity(0,-50);
                 if (input.contains("DOWN"))
-                    briefcase.addVelocity(0,50);
+                    smurf.addVelocity(0,50);
 
-                briefcase.update(elapsedTime);
+                smurf.update(elapsedTime);
 
                 // collision detection
 
@@ -112,7 +112,7 @@ public class Luncher extends Application
                 while ( moneybagIter.hasNext() )
                 {
                     Sprite moneybag = moneybagIter.next();
-                    if ( briefcase.intersects(moneybag) )
+                    if ( smurf.intersects(moneybag) )
                     {
                         moneybagIter.remove();
                         score.value++;
@@ -122,7 +122,7 @@ public class Luncher extends Application
                 // render
 
                 gc.clearRect(0, 0, 512,512);
-                briefcase.render( gc );
+                smurf.render( gc );
 
                 for (Sprite moneybag : moneybagList )
                     moneybag.render( gc );
