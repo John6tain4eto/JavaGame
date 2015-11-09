@@ -2,35 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b4f77a-8695-4867-b3fd-a439a613bf59" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/resources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JavaGameProject.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/IntValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/LongValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/Luncher$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/Luncher$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/Luncher$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/Luncher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Shit/Sprite.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/replace.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/replace.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/moneybag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/mushroom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/14662158-carnivorous-plant.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/16432Paddestoelen-enSchimmelinformatie.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/7400762champignon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Bonk_Choy_(Animated).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Paddest5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Sunflower_by_welikegroovyturtles-d35wtj4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Twin_sunflower.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/carnivora.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/champi-cuisine.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/champignon-imp-01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/download.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/gif.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/sponge-clip-art-182926.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/sunflower.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/thumb_7786.jpg" afterPath="" />
     </list>
     <ignored path="JavaGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +45,11 @@
       <file leaf-file-name="Luncher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Luncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5465995">
-              <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5">
+              <caret line="87" column="27" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2763#2771#0" expanded="true" />
+                <element signature="e#2734#2742#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,6 +111,30 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaGame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -417,8 +431,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -427,7 +441,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -470,34 +484,18 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2763#2771#0" expanded="true" />
+            <element signature="e#2734#2742#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_60/javafx-src.zip!/javafx/scene/image/Image.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324937">
-          <caret line="1091" column="0" selection-start-line="1091" selection-start-column="0" selection-end-line="1091" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_60/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.8010075">
-          <caret line="916" column="0" selection-start-line="916" selection-start-column="0" selection-end-line="916" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Luncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5465995">
-          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.5">
+          <caret line="87" column="27" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2763#2771#0" expanded="true" />
+            <element signature="e#2734#2742#0" expanded="true" />
           </folding>
         </state>
       </provider>
