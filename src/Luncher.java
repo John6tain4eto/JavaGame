@@ -87,8 +87,8 @@ public class Luncher extends Application
         for (int i = 0; i < 15; i++)
         {
             Sprite moneybag = new Sprite();
-            moneybag.setImage("moneybag.png");
-            double px = 350 * Math.random() + 50;
+            moneybag.setImage("mushroom.png");
+            double px = 840 * Math.random() + 50;
             double py = 350 * Math.random() + 50;
             moneybag.setPosition(px,py);
             moneybagList.add( moneybag );
@@ -136,7 +136,7 @@ public class Luncher extends Application
                 }
 
                 // render
-                gc.clearRect(0, 0, 512,512);
+                gc.clearRect(0, 0, 1000,512);
 
                 gc.drawImage(background, 0, 0);
                 smurf.render( gc );
@@ -144,9 +144,15 @@ public class Luncher extends Application
                 for (Sprite moneybag : moneybagList )
                     moneybag.render( gc );
 
+<<<<<<< HEAD
                 String pointsText = "   Score: " + (100 * score.value);
                 gc.fillText( pointsText, 360, 36 );
                 gc.strokeText( pointsText, 360, 36 );
+=======
+                String pointsText = "Score: " + (100 * score.value);
+                gc.fillText( pointsText, 850, 36 );
+                gc.strokeText( pointsText, 850, 36 );
+>>>>>>> 7b5fd093a3bc89089fc433017e217836620b6219
 
             }
         }.start();
