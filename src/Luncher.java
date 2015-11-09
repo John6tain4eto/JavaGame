@@ -57,6 +57,7 @@ public class Luncher extends Application
                 });
 
         final GraphicsContext gc = canvas.getGraphicsContext2D();
+        Image background = new Image("background.png");
 
         Font theFont = Font.font( "Helvetica", FontWeight.BOLD, 24 );
         gc.setFont( theFont );
@@ -88,6 +89,8 @@ public class Luncher extends Application
         {
             public void handle(long currentNanoTime)
             {
+
+
                 // calculate time since last update.
                 double elapsedTime = (currentNanoTime - lastNanoTime.value) / 1000000000.0;
                 lastNanoTime.value = currentNanoTime;
@@ -120,8 +123,9 @@ public class Luncher extends Application
                 }
 
                 // render
-
                 gc.clearRect(0, 0, 512,512);
+
+                gc.drawImage(background, 0, 0);
                 smurf.render( gc );
 
                 for (Sprite moneybag : moneybagList )
@@ -130,6 +134,7 @@ public class Luncher extends Application
                 String pointsText = "Cash: $" + (100 * score.value);
                 gc.fillText( pointsText, 360, 36 );
                 gc.strokeText( pointsText, 360, 36 );
+
             }
         }.start();
 
