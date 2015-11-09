@@ -1,21 +1,25 @@
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import javafx.animation.AnimationTimer;
-import javafx.event.EventHandler;
-import javafx.scene.input.KeyEvent;
+import javafx.stage.Screen;
+import javafx.geometry.Rectangle2D;
+import javafx.stage.Stage;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Luncher extends Application
 {
+
     public static void main(String[] args)
     {
         launch(args);
@@ -24,13 +28,22 @@ public class Luncher extends Application
     @Override
     public void start(Stage theStage)
     {
-        theStage.setTitle( "What Really smur" );
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+
+        //set Stage boundaries to visible bounds of the main screen
+        theStage.setX(primaryScreenBounds.getMinX());
+        theStage.setY(primaryScreenBounds.getMinY());
+        theStage.setWidth(primaryScreenBounds.getWidth());
+        theStage.setHeight(primaryScreenBounds.getHeight());
+        theStage.setFullScreen(true);
+
+        theStage.setTitle( "What Really Smurfs Do" );
 
         Group root = new Group();
         Scene theScene = new Scene( root );
         theStage.setScene( theScene );
 
-        Canvas canvas = new Canvas( 512, 512 );
+        Canvas canvas = new Canvas( 1000, 512 );
         root.getChildren().add( canvas );
 
         final ArrayList<String> input = new ArrayList<String>();
@@ -131,7 +144,7 @@ public class Luncher extends Application
                 for (Sprite moneybag : moneybagList )
                     moneybag.render( gc );
 
-                String pointsText = "Cash: $" + (100 * score.value);
+                String pointsText = "   Score: " + (100 * score.value);
                 gc.fillText( pointsText, 360, 36 );
                 gc.strokeText( pointsText, 360, 36 );
 
