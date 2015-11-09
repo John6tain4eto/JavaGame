@@ -42,8 +42,7 @@ public class Luncher extends Application
         Group root = new Group();
         Scene theScene = new Scene( root );
         theStage.setScene( theScene );
-
-        Canvas canvas = new Canvas( 1000, 512 );
+        Canvas canvas = new Canvas( primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight()+50);
         root.getChildren().add( canvas );
 
         final ArrayList<String> input = new ArrayList<String>();
@@ -82,16 +81,16 @@ public class Luncher extends Application
         smurf.setImage("1.png");
         smurf.setPosition(200, 0);
 
-        final ArrayList<Sprite> moneybagList = new ArrayList<Sprite>();
+        final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
         {
             Sprite moneybag = new Sprite();
             moneybag.setImage("mushroom.png");
-            double px = 840 * Math.random() + 50;
-            double py = 350 * Math.random() + 50;
+            double px = primaryScreenBounds.getMaxX() * Math.random() + 50;
+            double py = primaryScreenBounds.getMaxY() * Math.random() + 50;
             moneybag.setPosition(px,py);
-            moneybagList.add( moneybag );
+            items.add( moneybag );
         }
 
         final LongValue lastNanoTime = new LongValue( System.nanoTime() );
@@ -124,7 +123,7 @@ public class Luncher extends Application
 
                 // collision detection
 
-                Iterator<Sprite> moneybagIter = moneybagList.iterator();
+                Iterator<Sprite> moneybagIter = items.iterator();
                 while ( moneybagIter.hasNext() )
                 {
                     Sprite moneybag = moneybagIter.next();
@@ -136,23 +135,16 @@ public class Luncher extends Application
                 }
 
                 // render
-                gc.clearRect(0, 0, 1000,512);
-
-                gc.drawImage(background, 0, 0);
+                gc.clearRect(0,0,primaryScreenBounds.getWidth(),primaryScreenBounds.getHeight());
+                gc.drawImage(background,0,0,primaryScreenBounds.getWidth(),primaryScreenBounds.getHeight()+500);
                 smurf.render( gc );
 
-                for (Sprite moneybag : moneybagList )
+                for (Sprite moneybag : items )
                     moneybag.render( gc );
 
-<<<<<<< HEAD
-                String pointsText = "   Score: " + (100 * score.value);
-                gc.fillText( pointsText, 360, 36 );
-                gc.strokeText( pointsText, 360, 36 );
-=======
                 String pointsText = "Score: " + (100 * score.value);
                 gc.fillText( pointsText, 850, 36 );
                 gc.strokeText( pointsText, 850, 36 );
->>>>>>> 7b5fd093a3bc89089fc433017e217836620b6219
 
             }
         }.start();
