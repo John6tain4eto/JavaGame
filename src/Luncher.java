@@ -80,7 +80,7 @@ public class Luncher extends Application
         final Sprite smurf = new Sprite();
         smurf.setImage("2.png");
         smurf.setPosition(0,  primaryScreenBounds.getHeight());
-
+//domryhinmg
         final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
