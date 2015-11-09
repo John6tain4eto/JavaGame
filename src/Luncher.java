@@ -30,7 +30,7 @@ public class Luncher extends Application
         Scene theScene = new Scene( root );
         theStage.setScene( theScene );
 
-        Canvas canvas = new Canvas( 512, 512 );
+        Canvas canvas = new Canvas( 1000, 512 );
         root.getChildren().add( canvas );
 
         final ArrayList<String> input = new ArrayList<String>();
@@ -74,8 +74,8 @@ public class Luncher extends Application
         for (int i = 0; i < 15; i++)
         {
             Sprite moneybag = new Sprite();
-            moneybag.setImage("moneybag.png");
-            double px = 350 * Math.random() + 50;
+            moneybag.setImage("mushroom.png");
+            double px = 840 * Math.random() + 50;
             double py = 350 * Math.random() + 50;
             moneybag.setPosition(px,py);
             moneybagList.add( moneybag );
@@ -123,7 +123,7 @@ public class Luncher extends Application
                 }
 
                 // render
-                gc.clearRect(0, 0, 512,512);
+                gc.clearRect(0, 0, 1000,512);
 
                 gc.drawImage(background, 0, 0);
                 smurf.render( gc );
@@ -131,9 +131,9 @@ public class Luncher extends Application
                 for (Sprite moneybag : moneybagList )
                     moneybag.render( gc );
 
-                String pointsText = "Cash: $" + (100 * score.value);
-                gc.fillText( pointsText, 360, 36 );
-                gc.strokeText( pointsText, 360, 36 );
+                String pointsText = "Score: " + (100 * score.value);
+                gc.fillText( pointsText, 850, 36 );
+                gc.strokeText( pointsText, 850, 36 );
 
             }
         }.start();
