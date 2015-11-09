@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1b4f77a-8695-4867-b3fd-a439a613bf59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Luncher.java" afterPath="$PROJECT_DIR$/src/Luncher.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/14662158-carnivorous-plant.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/16432Paddestoelen-enSchimmelinformatie.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/7400762champignon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Bonk_Choy_(Animated).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Paddest5.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Sunflower_by_welikegroovyturtles-d35wtj4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/Twin_sunflower.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/carnivora.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/champi-cuisine.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/champignon-imp-01.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/download.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/download.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/gif.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/images.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/sponge-clip-art-182926.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/sunflower.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pictures/thumb_7786.jpg" afterPath="" />
     </list>
     <ignored path="JavaGame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +45,8 @@
       <file leaf-file-name="Luncher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Luncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45">
-              <caret line="44" column="102" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
+            <state vertical-scroll-proportion="0.5">
+              <caret line="87" column="27" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2734#2742#0" expanded="true" />
@@ -473,8 +491,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Luncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45">
-          <caret line="44" column="102" selection-start-line="44" selection-start-column="102" selection-end-line="44" selection-end-column="102" />
+        <state vertical-scroll-proportion="0.5">
+          <caret line="87" column="27" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2734#2742#0" expanded="true" />
