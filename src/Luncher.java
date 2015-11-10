@@ -130,8 +130,10 @@ public class Luncher extends Application
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            System.out.println("da");
-                            System.exit(1);
+                            Level3 thirdLevel = new Level3();
+                            thirdLevel.start();
+                            //System.out.println("da");
+                            //System.exit(1);
                         }
 
                     }
