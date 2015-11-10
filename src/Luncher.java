@@ -69,7 +69,7 @@ public class Luncher extends Application
                     }
                 });
         final GraphicsContext gc = canvas.getGraphicsContext2D();
-        Image background = new Image("level-2.png");
+        Image background = new Image("background.png");
 
         Font theFont = Font.font( "Helvetica", FontWeight.BOLD, 24 );
         gc.setFont( theFont );
@@ -85,7 +85,7 @@ public class Luncher extends Application
         for (int i = 0; i < 15; i++)
         {
             Sprite itemIter = new Sprite();
-            itemIter.setImage("plant1.png");
+            itemIter.setImage("mushroom.png");
             double px = (primaryScreenBounds.getMaxX()-200) * Math.random() + 50;
             double py = (primaryScreenBounds.getMaxY()-200) * Math.random() + 50;
             itemIter.setPosition(px,py);
@@ -130,8 +130,10 @@ public class Luncher extends Application
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            System.out.println("da");
-                            System.exit(1);
+                            LevelTow secondLevel = new LevelTow();
+                            secondLevel.start();
+                            //System.out.println("da");
+                            //System.exit(1);
                         }
 
                     }

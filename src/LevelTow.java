@@ -17,19 +17,15 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class LevelTow extends Application
+public class LevelTow
 {
-
-    public static void main(String[] args)
-    {
-        launch(args);
+    public LevelTow() {
     }
 
-    @Override
-    public void start(Stage theStage)
+    public void start()
     {
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-
+        Stage theStage = new Stage();
         //set Stage boundaries to visible bounds of the main screen
         theStage.setX(primaryScreenBounds.getMinX());
         theStage.setY(primaryScreenBounds.getMinY());
@@ -130,8 +126,8 @@ public class LevelTow extends Application
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            System.out.println("da");
-                            System.exit(1);
+                            Level3 thirdLevel = new Level3();
+                            thirdLevel.start();
                         }
 
                     }
