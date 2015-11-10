@@ -59,6 +59,7 @@ public class Luncher extends Application
                 });
 
         theScene.setOnKeyReleased(
+
                 new EventHandler<KeyEvent>()
                 {
                     public void handle(KeyEvent e)
@@ -67,7 +68,6 @@ public class Luncher extends Application
                         input.remove( code );
                     }
                 });
-
         final GraphicsContext gc = canvas.getGraphicsContext2D();
         Image background = new Image("background.png");
 
@@ -78,63 +78,64 @@ public class Luncher extends Application
         gc.setLineWidth(1);
 
         final Sprite smurf = new Sprite();
-        smurf.setImage("2.png");
-        smurf.setPosition(0,  primaryScreenBounds.getHeight());
-//domryhinmg
+        smurf.setImage("1.png");
+        smurf.setPosition(0,  primaryScreenBounds.getHeight()-100);
         final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
         {
-            Sprite moneybag = new Sprite();
-            moneybag.setImage("2m.png");
-            double px = primaryScreenBounds.getMaxX() * Math.random() + 50;
-            double py = primaryScreenBounds.getMaxY() * Math.random() + 50;
-            moneybag.setPosition(px,py);
-            items.add( moneybag );
+            Sprite itemIter = new Sprite();
+            itemIter.setImage("mushroom.png");
+            double px = (primaryScreenBounds.getMaxX()-200) * Math.random() + 50;
+            double py = (primaryScreenBounds.getMaxY()-200) * Math.random() + 50;
+            itemIter.setPosition(px,py);
+            items.add( itemIter );
         }
 
         final LongValue lastNanoTime = new LongValue( System.nanoTime() );
 
-        final IntValue score = new IntValue(0);
+
 
         new AnimationTimer()
         {
+
             public void handle(long currentNanoTime)
             {
 
-
+                  int score =0;
                 // calculate time since last update.
-                double elapsedTime = (currentNanoTime - lastNanoTime.value) / 1000000000.0;
+                double elapsedTime = (currentNanoTime - lastNanoTime.value) / (1000000000.0);
                 lastNanoTime.value = currentNanoTime;
 
-                // game logic
-
+                //game logic
                 smurf.setVelocity(0,0);
                 if (input.contains("LEFT"))
-                    smurf.addVelocity(-90,0);
+                    smurf.addVelocity(-200,0, "2.png");
                 if (input.contains("RIGHT"))
-                    smurf.addVelocity(90,0);
-                smurf.setImage("3.png");
-                smurf.setImage("2.png");
-                System.out.println( );
+                    smurf.addVelocity(200,0,"2.png");
                 if (input.contains("UP"))
-                    smurf.addVelocity(0,-90);
+                smurf.addVelocity(0,-200,"2.png");
                 if (input.contains("DOWN"))
-                    smurf.addVelocity(0,90);
-
+                    smurf.addVelocity(0,200,"2.png");
                 smurf.update(elapsedTime);
 
                 // collision detection
 
-                Iterator<Sprite> moneybagIter = items.iterator();
-                while ( moneybagIter.hasNext() )
+                Iterator<Sprite> itemIterIter = items.iterator();
+                while ( itemIterIter.hasNext() )
                 {
-                    Sprite moneybag = moneybagIter.next();
-                    if ( smurf.intersects(moneybag) )
+                    Sprite itemIter = itemIterIter.next();
+                    if ( smurf.intersects(itemIter) )
                     {
-                        moneybagIter.remove();
-                        score.value++;
+                        itemIterIter.remove();
+                        smurf.addScore(1000);
+                        if(smurf.getScore()==1500){
+                            System.out.println("da");
+                            System.exit(1);
+                        }
+
                     }
+
                 }
 
                 // render
@@ -142,12 +143,11 @@ public class Luncher extends Application
                 gc.drawImage(background,0,0,primaryScreenBounds.getWidth(),primaryScreenBounds.getHeight()+500);
                 smurf.render( gc );
 
-                for (Sprite moneybag : items )
-                    moneybag.render( gc );
-
-                String pointsText = "Score: " + (100 * score.value);
-                gc.fillText( pointsText, 850, 36 );
-                gc.strokeText( pointsText, 850, 36 );
+                for (Sprite itemIter : items )
+                    itemIter.render( gc );
+                String pointsText = "Score: " + (smurf.getScore());
+                gc.fillText( pointsText, primaryScreenBounds.getWidth()-150, 36 );
+                gc.strokeText( pointsText, primaryScreenBounds.getWidth()-150, 36 );
 
             }
         }.start();

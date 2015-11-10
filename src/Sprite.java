@@ -11,15 +11,25 @@ public class Sprite
     private double velocityY;
     private double width;
     private double height;
-
+    private int score;
     public Sprite()
     {
         positionX = 0;
         positionY = 0;
         velocityX = 0;
         velocityY = 0;
-    }
+         score = 0;
 
+    }
+    public void addScore(int value)
+    {
+        score+=value;
+    }
+    public int getScore ()
+    {
+
+        return score;
+    }
     public void setImage(Image i)
     {
         image = i;
@@ -45,12 +55,17 @@ public class Sprite
         velocityY = y;
     }
 
-    public void addVelocity(double x, double y)
+    public void addVelocity(double x, double y, String file)
     {
-        velocityX += x;
-        velocityY += y;
-    }
 
+            Image image1 = this.image;
+            this.setImage(file);
+            velocityX += x;
+            velocityY += y;
+            this.setImage(image1);
+
+
+    }
     public void update(double time)
     {
         positionX += velocityX * time;
