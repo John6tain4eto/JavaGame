@@ -1,6 +1,7 @@
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -11,13 +12,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
-import javafx.geometry.Rectangle2D;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Luncher extends Application
+public class LevelTow extends Application
 {
 
     public static void main(String[] args)
