@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 
 public  class MainMenu extends Application {
 
+
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -30,6 +32,7 @@ public  class MainMenu extends Application {
                     &&mouseEvent.getY() <(primaryScreenBounds.getHeight() /3)+9) {
                 LevelOne one = new LevelOne();
                 one.start();
+
             }
 
 

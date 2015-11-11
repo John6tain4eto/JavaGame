@@ -18,9 +18,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class LevelTwo {
+    private int finalScore;
 
-    public  LevelTwo(){
-
+    public  LevelTwo(int score){
+        this.finalScore = score;
     }
 
     public void start()
@@ -141,8 +142,9 @@ public class LevelTwo {
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            LevelThree secondLevel = new LevelThree();
+                            LevelThree secondLevel = new LevelThree(finalScore + smurf.getScore());
                             secondLevel.start();
+
                             //System.out.println("da");
                             //System.exit(1);
                         }

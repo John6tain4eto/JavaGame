@@ -124,9 +124,10 @@ public  class LevelOne
                     {
                         itemIterIter.remove();
                         smurf.addScore(1000);
+
                         if(smurf.getScore()==15000){
 
-                            LevelTwo secondLevel = new LevelTwo();
+                            LevelTwo secondLevel = new LevelTwo(smurf.getScore());
                             secondLevel.start();
 
                         }

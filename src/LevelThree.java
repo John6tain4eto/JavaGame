@@ -18,7 +18,10 @@ import java.util.Iterator;
 
 public class LevelThree
 {
-    public LevelThree() {
+    private int finalScore;
+
+    public LevelThree(int score) {
+        this.finalScore += score;
     }
 
     public void start()
@@ -124,7 +127,9 @@ public class LevelThree
                     {
                         itemIterIter.remove();
                         smurf.addScore(1000);
-                        if(smurf.getScore()==15000){System.exit(1);
+                        if(smurf.getScore()==15000){
+                        Score printScore = new Score(finalScore + (smurf.getScore()));
+                            printScore.start();
                         }
 
                     }
