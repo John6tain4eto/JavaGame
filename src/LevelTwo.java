@@ -1,6 +1,6 @@
 import javafx.animation.AnimationTimer;
-import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.geometry.Bounds;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -17,9 +17,10 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class LevelTow
-{
-    public LevelTow() {
+public class LevelTwo {
+
+    public  LevelTwo(){
+
     }
 
     public void start()
@@ -51,6 +52,7 @@ public class LevelTow
                         String code = e.getCode().toString();
                         if ( !input.contains(code) )
                             input.add( code );
+                        
                     }
                 });
 
@@ -65,7 +67,7 @@ public class LevelTow
                     }
                 });
         final GraphicsContext gc = canvas.getGraphicsContext2D();
-        Image background = new Image("level-2.png");
+        Image background = new Image("background.png");
 
         Font theFont = Font.font( "Helvetica", FontWeight.BOLD, 24 );
         gc.setFont( theFont );
@@ -81,7 +83,7 @@ public class LevelTow
         for (int i = 0; i < 15; i++)
         {
             Sprite itemIter = new Sprite();
-            itemIter.setImage("plant1.png");
+            itemIter.setImage("vodka.png");
             double px = (primaryScreenBounds.getMaxX()-200) * Math.random() + 50;
             double py = (primaryScreenBounds.getMaxY()-200) * Math.random() + 50;
             itemIter.setPosition(px,py);
@@ -98,7 +100,7 @@ public class LevelTow
             public void handle(long currentNanoTime)
             {
 
-                  int score =0;
+                int score =0;
                 // calculate time since last update.
                 double elapsedTime = (currentNanoTime - lastNanoTime.value) / (1000000000.0);
                 lastNanoTime.value = currentNanoTime;
@@ -110,9 +112,22 @@ public class LevelTow
                 if (input.contains("RIGHT"))
                     smurf.addVelocity(200,0,"2.png");
                 if (input.contains("UP"))
-                smurf.addVelocity(0,-200,"2.png");
+                    smurf.addVelocity(0,-200,"2.png");
                 if (input.contains("DOWN"))
                     smurf.addVelocity(0,200,"2.png");
+
+              /*  final Bounds bounds = canvas.getBoundsInLocal();
+                final boolean atRightBorder = smurf.getBoundary() >= (bounds.getMaxX() - smurf());
+                final boolean atLeftBorder = smurf.getLayoutX() <= (bounds.getMinX() + smurf.getRadius());
+                final boolean atBottomBorder = smurf.getLayoutY() >= (bounds.getMaxY() - smurf.getRadius());
+                final boolean atTopBorder = smurf.getLayoutY() <= (bounds.getMinY() + smurf.getRadius());
+
+                if (atRightBorder || atLeftBorder) {
+                    deltaX *= -1;
+                }
+                if (atBottomBorder || atTopBorder) {
+                    deltaY *= -1;
+                }*/
                 smurf.update(elapsedTime);
 
                 // collision detection
@@ -126,8 +141,10 @@ public class LevelTow
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            Level3 thirdLevel = new Level3();
-                            thirdLevel.start();
+                            LevelThree secondLevel = new LevelThree();
+                            secondLevel.start();
+                            //System.out.println("da");
+                            //System.exit(1);
                         }
 
                     }

@@ -1,6 +1,7 @@
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -11,25 +12,19 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
-import javafx.geometry.Rectangle2D;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Luncher extends Application
+public  class LevelOne
 {
 
-    public static void main(String[] args)
-    {
-        launch(args);
-    }
 
-    @Override
-    public void start(Stage theStage)
-    {
+
+    public void start()  {
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-
+        Stage theStage = new Stage();
         //set Stage boundaries to visible bounds of the main screen
         theStage.setX(primaryScreenBounds.getMinX());
         theStage.setY(primaryScreenBounds.getMinY());
@@ -69,7 +64,7 @@ public class Luncher extends Application
                     }
                 });
         final GraphicsContext gc = canvas.getGraphicsContext2D();
-        Image background = new Image("background.png");
+        Image background = new Image("level3background.png");
 
         Font theFont = Font.font( "Helvetica", FontWeight.BOLD, 24 );
         gc.setFont( theFont );
@@ -85,7 +80,7 @@ public class Luncher extends Application
         for (int i = 0; i < 15; i++)
         {
             Sprite itemIter = new Sprite();
-            itemIter.setImage("mushroom.png");
+            itemIter.setImage("beer.png");
             double px = (primaryScreenBounds.getMaxX()-200) * Math.random() + 50;
             double py = (primaryScreenBounds.getMaxY()-200) * Math.random() + 50;
             itemIter.setPosition(px,py);
@@ -102,7 +97,7 @@ public class Luncher extends Application
             public void handle(long currentNanoTime)
             {
 
-                  int score =0;
+                int score =0;
                 // calculate time since last update.
                 double elapsedTime = (currentNanoTime - lastNanoTime.value) / (1000000000.0);
                 lastNanoTime.value = currentNanoTime;
@@ -114,7 +109,7 @@ public class Luncher extends Application
                 if (input.contains("RIGHT"))
                     smurf.addVelocity(200,0,"2.png");
                 if (input.contains("UP"))
-                smurf.addVelocity(0,-200,"2.png");
+                    smurf.addVelocity(0,-200,"2.png");
                 if (input.contains("DOWN"))
                     smurf.addVelocity(0,200,"2.png");
                 smurf.update(elapsedTime);
@@ -130,10 +125,10 @@ public class Luncher extends Application
                         itemIterIter.remove();
                         smurf.addScore(1000);
                         if(smurf.getScore()==15000){
-                            LevelTow secondLevel = new LevelTow();
+
+                            LevelTwo secondLevel = new LevelTwo();
                             secondLevel.start();
-                            //System.out.println("da");
-                            //System.exit(1);
+
                         }
 
                     }
@@ -156,4 +151,5 @@ public class Luncher extends Application
 
         theStage.show();
     }
+
 }
