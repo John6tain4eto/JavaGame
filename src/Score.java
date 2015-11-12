@@ -1,9 +1,12 @@
 import javafx.animation.AnimationTimer;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -42,7 +45,17 @@ public class Score {
         gc.setFill(Color.BLUE);
         gc.setStroke(Color.BLACK);
         gc.setLineWidth(1);
+        Button quit = new Button("Quit");
+        quit.setLayoutX((primaryScreenBounds.getWidth() - 130) / 2);
+        quit.setLayoutY((primaryScreenBounds.getHeight()) /4);
+        theScene.getStylesheets().add("Buttons.css");
 
+        root.getChildren().add(quit);
+        quit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                System.exit(1);
+            }
+        });
         new AnimationTimer() {
 
             public void handle(long currentNanoTime) {
@@ -51,8 +64,8 @@ public class Score {
                 // render
                 gc.clearRect(0, 0, primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight());
                 gc.drawImage(background, 0, 0, primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight());
-                gc.fillText("Score: " + score, (primaryScreenBounds.getWidth() - 130) / 2, primaryScreenBounds.getHeight() / 3);
-                gc.strokeText("Score: " + score, (primaryScreenBounds.getWidth() - 130) / 2, primaryScreenBounds.getHeight() / 3);
+                gc.fillText("Score: " + score, (primaryScreenBounds.getWidth() - 180) / 2, primaryScreenBounds.getHeight() / 2.5);
+                gc.strokeText("Score: " + score, (primaryScreenBounds.getWidth() - 180) / 2, primaryScreenBounds.getHeight() / 2.5);
 
 
             }
