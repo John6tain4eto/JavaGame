@@ -71,8 +71,7 @@ public  class MainMenu extends Application {
         });
         play.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                /*LevelOne one = new LevelOne();*/
-                Score one = new Score(1);
+                LevelOne one = new LevelOne();
                 one.start();
             }
         });

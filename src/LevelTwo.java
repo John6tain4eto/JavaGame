@@ -77,7 +77,7 @@ public class LevelTwo {
         gc.setLineWidth(1);
 
         final Sprite smurf = new Sprite();
-        smurf.setImage("1.png");
+        smurf.setImage("4.png");
         smurf.setPosition(0,  primaryScreenBounds.getHeight()-100);
         final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
@@ -109,13 +109,13 @@ public class LevelTwo {
                 //game logic
                 smurf.setVelocity(0,0);
                 if (input.contains("LEFT"))
-                    smurf.addVelocity(-200,0, "2.png");
+                    smurf.addVelocity(-200,0);
                 if (input.contains("RIGHT"))
-                    smurf.addVelocity(200,0,"2.png");
+                    smurf.addVelocity(200,0);
                 if (input.contains("UP"))
-                    smurf.addVelocity(0,-200,"2.png");
+                    smurf.addVelocity(0,-200);
                 if (input.contains("DOWN"))
-                    smurf.addVelocity(0,200,"2.png");
+                    smurf.addVelocity(0,200);
 
               /*  final Bounds bounds = canvas.getBoundsInLocal();
                 final boolean atRightBorder = smurf.getBoundary() >= (bounds.getMaxX() - smurf());

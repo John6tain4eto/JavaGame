@@ -74,15 +74,15 @@ public  class LevelOne
 
         final Sprite smurf = new Sprite();
         smurf.setImage("1.png");
-        smurf.setPosition(0,  primaryScreenBounds.getHeight()-100);
+        smurf.setPosition(0,  primaryScreenBounds.getHeight()-200);
         final ArrayList<Sprite> items = new ArrayList<Sprite>();
 
         for (int i = 0; i < 15; i++)
         {
             Sprite itemIter = new Sprite();
             itemIter.setImage("beer.png");
-            double px = (primaryScreenBounds.getMaxX()-200) * Math.random() + 50;
-            double py = (primaryScreenBounds.getMaxY()-200) * Math.random() + 50;
+            double px = ((primaryScreenBounds.getMaxX()-200) * Math.random()) + 70;
+            double py = ((primaryScreenBounds.getMaxY()-200) * Math.random()) + 70;
             itemIter.setPosition(px,py);
             items.add( itemIter );
         }
@@ -105,13 +105,13 @@ public  class LevelOne
                 //game logic
                 smurf.setVelocity(0,0);
                 if (input.contains("LEFT"))
-                    smurf.addVelocity(-200,0, "2.png");
+                    smurf.addVelocity(-200,0);
                 if (input.contains("RIGHT"))
-                    smurf.addVelocity(200,0,"2.png");
+                    smurf.addVelocity(200,0);
                 if (input.contains("UP"))
-                    smurf.addVelocity(0,-200,"2.png");
+                    smurf.addVelocity(0,-200);
                 if (input.contains("DOWN"))
-                    smurf.addVelocity(0,200,"2.png");
+                    smurf.addVelocity(0,200);
                 smurf.update(elapsedTime);
 
                 // collision detection
